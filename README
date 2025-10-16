@@ -1,0 +1,16 @@
+# 🧱 Projet TRD - Architecture Microservices 
+
+Node js + express (avoir node js sur son pc tester node-v sur le cmd pour voir si on a une version au moins la 20.x)
+
+Creation d'une gateway qui redirige vers deux pseudos service pour tester une premiere fois et le service 1 qui interagit avec le service 2
+
+(Le gateway d'apres le cours c'est le fait d'implementer la logique metier à l'interieur pour recuperer les informations des differents service et la recevoir par la suite onv erra les aggregate comme vu dans le cours)
+- **Gateway (port 3000)** → point d’entrée principal (API Gateway)
+- **Service 1 (port interne 3001)** → microservice exposant une route `/api1`
+- **Service 2 (port interne 3002)** → microservice exposant une route `/api2`
+
+
+
+pour lancer le docker compose :docker compose up --build et apres naviguer sur les differents lien localhost 
+
+Les services communiquent entre eux via le **réseau interne Docker** :
